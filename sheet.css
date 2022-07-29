@@ -9,6 +9,21 @@ html, body {
     flex-direction: column;
     align-items: center;
     margin: 0;
+    background: radial-gradient(#1DBCD5, #e7d6e1);
+    font-family: "Comic Sans MS", "Comic Sans";
+}
+.header {
+    display: flex;
+    margin: 30px;
+    flex-direction: column;
+    align-items: center;
+}
+.header p {
+    margin:0;
+    color:white;
+    background-color: black;
+    border-radius: 10px;
+    padding: 5px;
 }
 .main {
     display: flex;
@@ -21,7 +36,8 @@ html, body {
     grid-template-columns: repeat(var(--columns), 1fr);
     height:60vh;
     width:60vh;
-    border: 2px red solid;
+    border: 5px #F9CB72 groove;
+    background-color: white;
 }
 .colorChoice {
     flex:1;
@@ -31,4 +47,64 @@ html, body {
 }
 .slider {
     flex:1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 36px;
+}
+#slideBar {
+    appearance: none;
+    width: 500px;
+    height: 25px;
+    border-radius: 15px;
+    border: 2px #F9CB72 solid; 
+}
+#slideBar::-webkit-slider-thumb {
+    appearance: none;
+    height: 50px;
+    background-color:  white;
+}
+#slideBar::-moz-range-thumb{
+    appearance: none;
+    height: 50px;
+    border: 2px #F9CB72 solid; 
+}
+.buttons {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+#clearButton {
+    width: 250px;
+    height: 75px;
+    background-color: white;
+    font-size: large;
+    font-family: "Comic Sans MS", "Comic Sans";
+    border-radius: 12px;
+    border: 3px #F9CB72 solid;
+}
+#blackButton, #redButton, #greenButton, #blueButton, #rgbButton {
+    margin: 10px;
+    width: 150px;
+    height: 40px;
+    border-radius: 12px;
+    border: 3px #F9CB72 solid;
+}
+#rgbButton {
+    background-image: linear-gradient(135deg, red 0%,red 33%,green 33%,green 66%,blue 66%, blue 100%);
+}
+#alert {
+    font-size: large;
+    background-color: #F9CB72;
+    border-radius: 8px;
+    padding: 10px;
+    
+}
+#colorHeader {
+    margin-bottom: 10px;
+    font-size: 36px;
+    background-image: linear-gradient(90deg, red, green, blue);
+    background-repeat: no-repeat;
+    background-size: 100% 3px;
+    background-position: bottom left;
 }
