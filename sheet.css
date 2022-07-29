@@ -29,8 +29,10 @@ html, body {
     display: flex;
     width: 100vw;
     justify-content: center;
+    flex-wrap: wrap;
 }
 #grid {
+    flex-shrink: 1;
     display: grid;
     grid-template-rows: repeat(var(--rows),1fr);
     grid-template-columns: repeat(var(--columns), 1fr);
@@ -40,13 +42,13 @@ html, body {
     background-color: white;
 }
 .colorChoice {
-    flex:1;
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .slider {
-    flex:1;
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;

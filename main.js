@@ -110,6 +110,26 @@ for(let i = 1; i<=64; i++) {
                 newDiv.style.backgroundColor = color;
             }
         })
+        newDiv.addEventListener("touchmove", () => {
+            if(colorBool) {
+                newDiv.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+                if(r===255) {
+                    r=0;
+                    g=255;
+                }
+                else if(g===255) {
+                    g=0;
+                    b=255;
+                }
+                else {
+                    b=0;
+                    r=255;
+                }
+            } 
+            else {
+                newDiv.style.backgroundColor = color;
+            }
+        })
         document.getElementById("grid").appendChild(newDiv);
     }
 }
