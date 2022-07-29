@@ -59,8 +59,9 @@ html, body {
     width: 500px;
     height: 25px;
     border-radius: 15px;
-    border: 2px #F9CB72 solid; 
+    border: 2px #F9CB72 solid;
 }
+
 #slideBar::-webkit-slider-thumb {
     appearance: none;
     height: 50px;

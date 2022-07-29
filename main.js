@@ -38,6 +38,8 @@ const currentColor = document.getElementById("currentColor");
 
 blackButton.addEventListener("click", () => {
     color='black';
+    currentColor.innerHTML = "Current Color";
+    currentColor.style.backgroundImage = 'none';
     currentColor.style.backgroundColor = color;
     tempColor = color;
     sum=0;
@@ -45,6 +47,8 @@ blackButton.addEventListener("click", () => {
 });
 redButton.addEventListener("click", () => {
     color='red'
+    currentColor.innerHTML = "Current Color";
+    currentColor.style.backgroundImage = 'none';
     currentColor.style.backgroundColor = color;
     tempColor = color;
     sum=0;
@@ -52,6 +56,8 @@ redButton.addEventListener("click", () => {
 });
 greenButton.addEventListener("click", () => {
     color='green';
+    currentColor.innerHTML = "Current Color";
+    currentColor.style.backgroundImage = 'none';
     currentColor.style.backgroundColor = color;
     tempColor = color;
     sum=0;
@@ -59,6 +65,8 @@ greenButton.addEventListener("click", () => {
 });
 blueButton.addEventListener("click", () => {
     color='blue';
+    currentColor.innerHTML = "Current Color";
+    currentColor.style.backgroundImage = 'none';
     currentColor.style.backgroundColor = color;
     tempColor = color;
     sum=0;
@@ -66,6 +74,7 @@ blueButton.addEventListener("click", () => {
 });
 rgbButton.addEventListener("click", () => {
     colorBool = true;
+    currentColor.innerHTML = "Current Color";
     currentColor.style.backgroundImage = "linear-gradient(135deg, red 0%,red 33%,green 33%,green 66%,blue 66%, blue 100%)";
     tempColorBool = colorBool;
 });
@@ -79,8 +88,11 @@ document.addEventListener("keypress", (event) => {
         sum++;
       }
       else if(sum===1) {
+        if(tempColorBool) {
+            colorBool = tempColorBool;
+            tempColorBool = false;
+        }
         color=tempColor;
-        colorBool = tempColorBool;
         currentColor.innerHTML = "Current Color";
         sum=0;
       } 
@@ -91,26 +103,6 @@ for(let i = 1; i<=64; i++) {
     for(let z = 1; z<=64; z++) {
         const newDiv = document.createElement("div");
         newDiv.addEventListener("mouseover", () => {
-            if(colorBool) {
-                newDiv.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-                if(r===255) {
-                    r=0;
-                    g=255;
-                }
-                else if(g===255) {
-                    g=0;
-                    b=255;
-                }
-                else {
-                    b=0;
-                    r=255;
-                }
-            } 
-            else {
-                newDiv.style.backgroundColor = color;
-            }
-        })
-        newDiv.addEventListener("touchmove", () => {
             if(colorBool) {
                 newDiv.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
                 if(r===255) {
