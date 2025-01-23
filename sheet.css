@@ -54,24 +54,23 @@ html, body {
     align-items: center;
     font-size: 36px;
 }
+
 #slideBar {
     appearance: none;
     width: 500px;
     height: 25px;
-    border-radius: 15px;
+    border-radius: 25px;
     border: 2px #F9CB72 solid;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    padding: 2px;
 }
 
-#slideBar::-webkit-slider-thumb {
-    appearance: none;
-    height: 50px;
-    background-color:  white;
+#slideBar:hover {
+    opacity: 1;
 }
-#slideBar::-moz-range-thumb{
-    appearance: none;
-    height: 50px;
-    border: 2px #F9CB72 solid; 
-}
+  
 .buttons {
     display: flex;
     flex: 1;
